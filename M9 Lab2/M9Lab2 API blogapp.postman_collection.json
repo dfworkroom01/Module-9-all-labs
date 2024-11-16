@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "7e243814-cf29-4837-a8e4-a91a8117d1eb",
+		"name": "M9Lab2 API blogapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33344687"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/users/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"testpassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"testpassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/comments/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzM4MGI0ODhhMjYzNGIwYzA0MTExYmMiLCJpYXQiOjE3MzE3MjkzODd9.dUsl26wqfLAR8QyMyEonJqsAQYoZBOurqk2ka-C59vc"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Hi, This is a first comment\",\r\n  \"parentComment\": null  \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/comments/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/comments/answer/67381a5161d5b64a42ffea4d",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzM4MGI0ODhhMjYzNGIwYzA0MTExYmMiLCJpYXQiOjE3MzE3MjkzODd9.dUsl26wqfLAR8QyMyEonJqsAQYoZBOurqk2ka-C59vc"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"text\": \"I am answering my own comment\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/comments/answer/67381a5161d5b64a42ffea4d"
+			},
+			"response": []
+		}
+	]
+}

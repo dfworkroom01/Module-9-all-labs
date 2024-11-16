@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "67381a5161d5b64a42ffea4d"
+  },
+  "text": "Hi, This is a first comment",
+  "user": {
+    "$oid": "67380b488a2634b0c04111bc"
+  },
+  "parentComment": null,
+  "likes": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6738216f61d5b64a42ffea4f"
+  },
+  "text": "I am answering my own comment",
+  "user": {
+    "$oid": "67380b488a2634b0c04111bc"
+  },
+  "parentComment": {
+    "$oid": "67381a5161d5b64a42ffea4d"
+  },
+  "likes": [
+    {
+      "$oid": "67380b488a2634b0c04111bc"
+    }
+  ],
+  "__v": 1
+}]

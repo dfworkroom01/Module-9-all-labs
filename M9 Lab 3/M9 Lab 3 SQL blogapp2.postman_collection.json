@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "fa85ae50-4f60-4a60-ba65-0fbc3306b668",
+		"name": "M9 Lab 3 SQL blogapp2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33344687"
+	},
+	"item": [
+		{
+			"name": "Register test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 201 Created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains a token\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"token\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser3\",\r\n  \"email\": \"testuser3@example.com\",\r\n  \"password\": \"testpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/comments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 201 Created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains text\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"text\");\r",
+							"    pm.expect(pm.response.json().text).to.eql(\"This is a comment!\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTczMTc1NjYyNCwiZXhwIjoxNzMxNzYwMjI0fQ.n9j8upkTDHf6ESybe60uaD2Z4mdAtrq8JpzxXDz5sec"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"This is my first comment, tho!\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/comments/answer/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTczMTc1NjYyNCwiZXhwIjoxNzMxNzYwMjI0fQ.n9j8upkTDHf6ESybe60uaD2Z4mdAtrq8JpzxXDz5sec"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Hi, welcome to this blog!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/comments/answer/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/comments/like/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTczMTc1NjYyNCwiZXhwIjoxNzMxNzYwMjI0fQ.n9j8upkTDHf6ESybe60uaD2Z4mdAtrq8JpzxXDz5sec"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:5000/api/comments/like/2"
+			},
+			"response": []
+		}
+	]
+}

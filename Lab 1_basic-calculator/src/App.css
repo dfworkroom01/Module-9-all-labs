@@ -1,0 +1,95 @@
+/* src/App.css */
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+select,
+button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+
+input[type='number'],
+select {
+  background-color: #fff;
+}
+
+/* Reduce width of the operator select box */
+select {
+  width: 100px; /* Make the operator box smaller */
+}
+
+/* Button styles */
+button {
+  cursor: pointer;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the Result Display */
+h2 {
+  font-size: 2em;
+  color: white;
+  background-color: #28a745; /* Green background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the inputs and operator select box */
+input[type="number"], select {
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* Reset Button Styles */
+.reset-button {
+  background-color: #4a0a0a; /* Red */
+  color: white;
+  font-size: 18px;
+  width: 250px; /* Same width as the other buttons */
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.reset-button:hover {
+  background-color: #c0392b; /* Darker Red */
+}
+
+/* Responsive Design: Make it mobile-friendly */
+@media (max-width: 600px) {
+  input,
+  select,
+  button {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  h2 {
+    width: 80%;
+  }
+}

@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "c44cae76-e117-4c49-8726-6ef778c2d3ae",
+		"name": "M9L4 AvatarApp API tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33344687"
+	},
+	"item": [
+		{
+			"name": "https://api.sampleapis.com/avatar/characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.sampleapis.com/avatar/characters"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.sampleapis.com/avatar/info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.sampleapis.com/avatar/info"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/avatar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/avatar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/avatar/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"success\": true,\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Aang Kinosuke\",\r\n        \"image\": \"https://static.wikia.nocookie.net/avatar/images/a/ae/Aang_at_Jasmine_Dragon.png/revision/latest/scale-to-width-down/333?cb=20130612174003\",\r\n        \"bio\": {\r\n            \"alternativeNames\": [\r\n                \"Aangy (by Koko)\",\r\n                \"Kuzon (while at the Fire Nation school)\",\r\n                \"Twinkle Toes (by Toph)\",\r\n                \"Sweetie (by Katara)\"\r\n            ],\r\n            \"nationality\": \"Southern Air Temple\",\r\n            \"ethnicity\": \"Air Nomad\",\r\n            \"ages\": [\r\n                \"112 (biologically 12) in Avatar: The Last Airbender[3]\",\r\n                \"113-114 (biologically 13-14) in The Promise trilogy[4]\",\r\n                \"114-115 (biologically 14-15) in The Search and The Rift trilogies[5]\",\r\n                \"165 (biologically 66) at death[6]\"\r\n            ],\r\n            \"born\": \"12 BG\",\r\n            \"died\": [\r\n                \"Spring 100 AG (revived by Katara using spirit water)\",\r\n                \"153 AG\"\r\n            ]\r\n        },\r\n        \"physicalDescription\": {\r\n            \"gender\": \"Male\",\r\n            \"eyeColor\": \"Gray\",\r\n            \"hairColor\": \"Dark brown (typically shaved)\",\r\n            \"skinColor\": \"Light\"\r\n        },\r\n        \"personalInformation\": {\r\n            \"loveInterst\": \"Katara (wife)\",\r\n            \"allies\": [\r\n                \"Appa\",\r\n                \"Katara\",\r\n                \"Momo\",\r\n                \"Sokka\",\r\n                \"Tenzin\",\r\n                \"Toph\",\r\n                \"Zuko\",\r\n                \"King Bumi\",\r\n                \"Bumi\",\r\n                \"Gyatso\",\r\n                \"Hakoda\",\r\n                \"Iroh\",\r\n                \"Kya\",\r\n                \"Suki\",\r\n                \"Kuzon\",\r\n                \"lion turtle\",\r\n                \"all Avatars\"\r\n            ],\r\n            \"enemies\": [\r\n                \"Azula\",\r\n                \"Ozai\",\r\n                \"Zhao\",\r\n                \"Zuko (formerly)\",\r\n                \"Combustion Man\",\r\n                \"Long Feng\",\r\n                \"Sozin\",\r\n                \"Yakone\",\r\n                \"Joo Dee\",\r\n                \"the Dai Li\"\r\n            ],\r\n            \"weaponsOfChoice\": [\r\n                \"The elements\",\r\n                \"glider staff\"\r\n            ],\r\n            \"fightingStyles\": [\r\n                \"Airbending\",\r\n                \"waterbending (Northern and Southern style)\",\r\n                \"earthbending (Chu Gar Praying Mantis Kung Fu)\",\r\n                \"firebending (Dancing Dragon)\",\r\n                \"energybending\"\r\n            ]\r\n        },\r\n        \"politicalInformation\": {\r\n            \"profession\": [\r\n                \"Air Nomad culture teacher\",\r\n                \"Airbending instructor\",\r\n                \"Avatar\",\r\n                \"Monk\"\r\n            ],\r\n            \"position\": [\r\n                \"Co-founder of the United Republic of Nations\",\r\n                \"Fully realized Avatar\"\r\n            ],\r\n            \"predecessor\": \"Roku (as the Avatar)\",\r\n            \"successor\": \"Korra (as the Avatar)\",\r\n            \"affiliations\": [\r\n                \"Air Acolytes\",\r\n                \"Air Nomads\",\r\n                \"Air Scouts (formerly)\",\r\n                \"Team Avatar\"\r\n            ]\r\n        },\r\n        \"chronologicalInformation\": {\r\n            \"firstAppearance\": \"\\\"The Boy in the Iceberg\\\"\",\r\n            \"lastAppearance\": [\r\n                \"Imbalance Part Three (chronological)\",\r\n                \"\\\"Darkness Falls\\\"(as spirit)\",\r\n                \"\\\"Remembrances\\\"(flashback only)\"\r\n            ],\r\n            \"voicedBy\": [\r\n                \"Zach Tyler Eisen (in Avatar: The Last Airbender)\",\r\n                \"Mitchel Musso (unaired pilot episode)\",\r\n                \"D. B. Sweeney (in The Legend of Korra)\"\r\n            ]\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/avatar/1"
+			},
+			"response": []
+		}
+	]
+}

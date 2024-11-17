@@ -1,0 +1,191 @@
+/* Global reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Main container for the app */
+  .App {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Welcome screen */
+  .App > div {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .App h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  input[type='text'] {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Chat messages and layout */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .chat-container > div {
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for each message */
+  .message {
+    background-color: #e1f5fe;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    margin: 5px 0;
+    word-wrap: break-word;
+  }
+  
+  .message.sent {
+    background-color: #a5d6a7;
+    margin-left: auto;
+  }
+  
+  .message p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Input field for sending messages */
+  .message-input-container {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input[type='text'].message-input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input[type='text'].message-input:focus {
+    border-color: #4caf50;
+  }
+  
+  /* Typing indicator */
+  .typing-indicator {
+    font-size: 14px;
+    font-style: italic;
+    color: #888;
+    padding: 5px 10px;
+  }
+  
+  /* User list */
+  .users-list {
+    background-color: #fafafa;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: left;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .users-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .users-list li {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .App {
+      width: 100%;
+      margin: 0 10px;
+    }
+  
+    .chat-container {
+      padding: 10px;
+    }
+  
+    input[type='text'].message-input {
+      width: 70%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .App {
+      width: 100%;
+    }
+  
+    .message {
+      max-width: 90%;
+    }
+  
+    input[type='text'] {
+      width: 60%;
+    }
+  
+    .message-input-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
